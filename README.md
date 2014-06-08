@@ -3,11 +3,9 @@ nitra-dart
 
 Nitra grammar for the Dart programming language.
 
-Instructions for development
-============================
+## Prerequisites
 
-Installing Nemerle
-==================
+### Installing Nemerle
 
 Nitra is authored in a custom CLR language called Nemerle. Before attempting anything else you must get Nemerle working on your computer.
 
@@ -24,27 +22,23 @@ On the right hand side among the project templates, you should find a Nemerle no
 a Nitra node under the Nemerle node which contains two templates, Empty parser libarary, and Sample parser application.
 If you find this you probably have succeeded in installing nemerle and can move on to the next step.
 
-Installing Nitra
-================
+### Installing Nitra
 
 Go the to the download section of Nitra's homepage, download the installer "Nitra.Setup.msi.", close all VS instances, and run it.
 
 http://confluence.jetbrains.com/display/Nitra/Install
 
-Opening the Dart grammar project
-================================
+## Opening the Dart grammar project
 
 Now that nemerle and Nitra are installed you should be able to open the Dart.Grammar project by simply opening the .sln file in the root.
 
 To build just hit Ctrl+Shift+B as usual. This should produce the Dart.Grammar.dll that is what we need.
 
-Testing the grammar in Nitra.Visualizer
-=======================================
+## Testing the grammar in Nitra.Visualizer
 
 Start the Nitra.Visualizer (the start-menu shortcut is named "Parser Visualizer"). TODO...
 
-Using the Dart grammar in Visual Studio
-=======================================
+## Using the Dart grammar in Visual Studio
 
 In order to use the Dart Grammar DLL in Visual Studio you must configure it as a language in the Nitra Visual Studio extension. This is done
 by editing the file NitraGlobalConfig.xml which is probably located in C:\Program Files (x86)\JetBrains\Nitra. Add the following section as
