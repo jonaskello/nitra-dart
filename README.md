@@ -18,7 +18,7 @@ If you are not using VS2013 you could probably use one of the installer from the
 http://nemerle.org/Downloads
 
 Once you have installed Nemerle you can verify that it is working by starting Visual Studio and opening the create new project dialog. 
-On the right hand side among the project templates, you should find a Nemerle node similar to the C# and Visual Basic nodes. There should be
+On the left hand side among the project templates, you should find a Nemerle node similar to the C# and Visual Basic nodes. There should be
 a Nitra node under the Nemerle node which contains two templates, Empty parser libarary, and Sample parser application.
 If you find this you probably have succeeded in installing nemerle and can move on to the next step.
 
@@ -28,17 +28,29 @@ Go the to the download section of Nitra's homepage, download the installer "Nitr
 
 http://confluence.jetbrains.com/display/Nitra/Install
 
-## Opening the Dart grammar project
+## Using the Dart grammar project
+
+### Building
 
 Now that nemerle and Nitra are installed you should be able to open the Dart.Grammar project by simply opening the .sln file in the root.
 
 To build just hit Ctrl+Shift+B as usual. This should produce the Dart.Grammar.dll that is what we need.
 
-## Testing the grammar in Nitra.Visualizer
+### Testing the grammar in Nitra.Visualizer
 
-Start the Nitra.Visualizer (the start-menu shortcut is named "Parser Visualizer"). TODO...
+Start the Nitra.Visualizer (the start-menu shortcut is named "Parser Visualizer").
+If it is the first time you start it you need to select a root directory for the tests, any directory will do.
+Click File > Add test suite
+Fill in the name "DartTests".
+Click the Add library and add the Dart.Grammar.dll file.
+Under syntax modules, check the Dart module.
+Under start rule, select Dart::CompilationUnit.
+Click OK.
 
-## Using the Dart grammar in Visual Studio
+Make sure you have have the name "DartTests" selected on the left hand side. Then type some Dart code on the right hand side and then
+click the "Run all" button to see if it can be parsed.
+
+### Using the Dart grammar in Visual Studio
 
 In order to use the Dart Grammar DLL in Visual Studio you must configure it as a language in the Nitra Visual Studio extension. This is done
 by editing the file NitraGlobalConfig.xml which is probably located in C:\Program Files (x86)\JetBrains\Nitra. Add the following section as
